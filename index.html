@@ -1,0 +1,132 @@
+هيا بنا! 🚀 سنضيف الآن **العرض التوضيحي التفاعلي** لموقعك حتى يصبح زوار الموقع يجربون تحليل صور قاع العين مباشرة.
+
+بما أن النسخ صعب عليك، سأرسل الكود على **4 أجزاء قصيرة**. ابدأ كالتالي:
+
+1. من مستودعك اضغط **«...»** ثم **إضافة ملف (Add file)** → **إنشاء ملف جديد (Create new file)**.
+2. اكتب اسم الملف: `index.html`
+3. انسخ **الجزء الأول** التالي والصقه في مساحة الكتابة، ولا تحفظ بعد:
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بَصَر — الكشف المبكر عن اعتلال الشبكية السكري</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Tahoma,Arial,sans-serif;background:#f4f8f7;color:#0c2b33;line-height:1.8}
+header{background:#fff;padding:14px 20px;display:flex;justify-content:space-between;border-bottom:1px solid #e2ecec;position:sticky;top:0}
+header b{color:#0f766e;font-size:1.2rem}
+header a{color:#5b7078;text-decoration:none;font-weight:600}
+.hero{background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;text-align:center;padding:50px 20px}
+.hero h1{font-size:2.4rem}
+.hero p{max-width:600px;margin:10px auto 20px}
+.btn{background:#fff;color:#0f766e;padding:10px 26px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
+section{max-width:900px;margin:auto;padding:40px 20px}
+h2{color:#0f766e}
+.muted{color:#5b7078;margin:6px 0 18px}
+.samples{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.samples button,.samples label{background:#fff;border:2px solid #e2ecec;border-radius:12px;padding:10px 14px;cursor:pointer;font-weight:600;font-family:inherit}
+.samples button.active{border-color:#0f766e;color:#0f766e;background:#e6f7f4}
+.viewer{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:800px){.viewer{grid-template-columns:1fr}}
+.frame{position:relative;aspect-ratio:1;background:#081a1f;border-radius:16px;overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover}
+.scan{position:absolute;left:0;right:0;height:4px;top:0;opacity:0;background:linear-gradient(90deg,transparent,#22d3ee,transparent)}
+.frame.on .scan{opacity:1;animation:s 1.5s linear infinite}
+@keyframes s{from{top:0}to{top:100%}}
+.panel{background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+
+بعد لصقه اكتب لي «تم» لأرسل الجزء الثاني.
+  **الجزء 2 من 4** — الصقه مباشرة بعد الجزء الأول:
+
+#go{background:#0f766e;color:#fff;border:none;border-radius:12px;padding:13px;font-weight:700;font-family:inherit;cursor:pointer}
+#go:disabled{opacity:.4}
+.prog{height:8px;background:#e6efee;border-radius:99px;overflow:hidden}
+#bar{height:100%;width:0;background:#14b8a6;transition:width .5s}
+#step{color:#5b7078;font-size:.9rem;min-height:1.5em}
+.res{display:none;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.res.show{display:flex}
+.gw{position:relative;width:140px;height:140px}
+.gw circle{fill:none;stroke-width:11;stroke-linecap:round}
+.bg{stroke:#e6efee}
+.arc{stroke:#16a34a;stroke-dasharray:326.73;stroke-dashoffset:326.73;transform:rotate(-90deg);transform-origin:60px 60px;transition:stroke-dashoffset 1s}
+#pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:800}
+.chip{color:#fff;padding:4px 18px;border-radius:999px;font-weight:700}
+#advice{color:#5b7078;font-size:.9rem}
+.note{background:#fdf6e3;border:1px solid #f3e3b3;color:#5b7078;border-radius:10px;padding:8px;font-size:.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:#fff;border-radius:14px;padding:16px}
+.card h3{color:#0f766e;font-size:1rem}
+.card p{color:#5b7078;font-size:.9rem}
+footer{background:#0c2b33;color:#bcd6d2;text-align:center;padding:20px;font-size:.85rem}
+</style>
+</head>
+<body>
+<header><b>👁 بَصَر</b><a href="#about">عن المشروع</a></header>
+<div class="hero"><h1>بَصَر</h1><p>نظام ذكي للكشف المبكر عن اعتلال الشبكية السكري من صور قاع العين</p><a class="btn" href="#demo">جرّب العرض التوضيحي</a></div>
+
+اكتب «تم» لأرسل الجزء الثالث.
+  **الجزء 3 من 4** — الصقه بعد الجزء الثاني:
+
+<section id="demo">
+<h2>التجربة التوضيحية</h2>
+<p class="muted">اختر صورة تجريبية أو ارفع صورة ثم اضغط «تحليل الصورة»</p>
+<div class="samples">
+<button id="bN">شبكية سليمة</button>
+<button id="bD">شبكية مصابة</button>
+<label>رفع صورة<input type="file" id="file" accept="image/*" hidden></label>
+</div>
+<div class="viewer">
+<div class="frame" id="frame"><img id="img" alt="صورة قاع العين"><div class="scan"></div></div>
+<div class="panel">
+<button id="go" disabled>تحليل الصورة</button>
+<div class="prog"><div id="bar"></div></div>
+<div id="step">اختر صورة لبدء التحليل.</div>
+<div class="res" id="res">
+<div class="gw"><svg viewBox="0 0 120 120" width="140" height="140"><circle class="bg" cx="60" cy="60" r="52"/><circle class="arc" id="arc" cx="60" cy="60" r="52"/></svg><div id="pct">0%</div></div>
+<div class="chip" id="chip">—</div>
+<p id="advice"></p>
+</div>
+<div class="note">⚠️ عرض تعليمي وليس تشخيصًا طبيًا</div>
+</div>
+</div>
+</section>
+<section id="about">
+<h2>عن المشروع</h2>
+<div class="cards">
+<div class="card"><h3>الفكرة</h3><p>كشف مبكر عن اعتلال الشبكية السكري بتحليل صور قاع العين.</p></div>
+<div class="card"><h3>البيانات والتقنية</h3><p>صور قاع عين (APTOS على Kaggle) مع شبكات عصبية التفافية CNN.</p></div>
+<div class="card"><h3>الاستخدام</h3><p>أداة فرز أولي في عيادات العيون تساعد الأطباء والمرضى.</p></div>
+<div class="card"><h3>التحديات والمستقبل</h3><p>لا يغني عن الطبيب؛ مستقبلًا توسيع لأمراض أخرى وربط مع المستشفيات.</p></div>
+</div>
+<p class="muted">الوصف الكامل في ملف README بالمستودع: <a href="https://github.com/Mohsensafe2/basar-ai">github.com/Mohsensafe2/basar-ai</a></p>
+</section>
+<footer>مشروع بَصَر — دورة عناصر الذكاء الاصطناعي</footer>
+
+اكتب «**الجزء 4 من 4 (الأخير)** — الصقه في نهاية الملف:
+
+<script>
+var S={n:'https://image.qwenlm.ai/public_source/5fce8e94-567d-41a6-90da-63319064c64b/1688b51e8-7711-4ee3-9aa9-8ff48b05505d.png',d:'https://image.qwenlm.ai/public_source/5fce8e94-567d-41a6-90da-63319064c64b/100be95c0-9103-4b0c-9967-9565f5f40ccb.png'};
+var img=document.getElementById('img'),go=document.getElementById('go'),bar=document.getElementById('bar'),step=document.getElementById('step'),res=document.getElementById('res'),arc=document.getElementById('arc'),pct=document.getElementById('pct'),chip=document.getElementById('chip'),advice=document.getElementById('advice'),frame=document.getElementById('frame');
+var cur=null,hint=null,busy=false;
+function set(src,h){var t=new Image();t.onload=function(){cur=t;hint=h;img.src=src;go.disabled=false;res.classList.remove('show');arc.style.strokeDashoffset=326.73;step.textContent='الصورة جاهزة. اضغط تحليل الصورة.'};t.src=src}
+function sample(k){document.getElementById('bN').classList.toggle('active',k==='n');document.getElementById('bD').classList.toggle('active',k==='d');step.textContent='جارٍ التحميل…';fetch(S[k]).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(b){set(URL.createObjectURL(b),k==='n'?6:88)}).catch(function(){set(S[k],k==='n'?6:88)})}
+document.getElementById('bN').onclick=function(){sample('n')};
+document.getElementById('bD').onclick=function(){sample('d')};
+document.getElementById('file').onchange=function(e){var f=e.target.files[0];if(f)set(URL.createObjectURL(f),null)};
+function sev(r){if(r<25)return['سليم على الأرجح','#16a34a','لا علامات ملحوظة؛ يُنصح بالفحص الدوري السنوي لمرضى السكري.'];if(r<50)return['علامات خفيفة','#f59e0b','مؤشرات خفيفة؛ يُنصح بمتابعة الطبيب وإعادة الفحص لاحقًا.'];if(r<75)return['علامات متوسطة','#ea580c','توجد علامات تستدعي مراجعة أخصائي العيون قريبًا.'];return['علامات شديدة','#dc2626','علامات قوية؛ يُوصى بمراجعة أخصائي العيون عاجلًا.']}
+function heur(im){try{var s=160,c=document.createElement('canvas');c.width=s;c.height=s;var x=c.getContext('2d');x.drawImage(im,0,0,s,s);var p=x.getImageData(0,0,s,s).data,d=0,b=0,t=s*s;for(var i=0;i<p.length;i+=4){var r=p[i],g=p[i+1],l=p[i+2];if(r>70&&g<r*.4&&l<r*.4)d++;if(r>215&&g>195&&l>130)b++}return Math.max(3,Math.min(96,(d/t)*260+(b/t)*160+5))}catch(e){return 50}}
+go.onclick=function(){if(busy||!cur)return;busy=true;go.disabled=true;res.classList.remove('show');frame.classList.add('on');bar.style.width='0';var st=['معالجة الصورة…','استخراج الملامح…','تشغيل نموذج التصنيف…','حساب الاحتمال…'];var i=0;step.textContent=st[0];var t=setInterval(function(){i++;if(i<st.length){step.textContent=st[i];bar.style.width=(i/st.length*100)+'%'}else{clearInterval(t);bar.style.width='100%';done()}},550)};
+function done(){var r=hint!==null?hint:heur(cur);var v=sev(r);var C=2*Math.PI*52;arc.style.stroke=v[1];requestAnimationFrame(function(){arc.style.strokeDashoffset=C*(1-r/100)});pct.textContent=Math.round(r)+'%';chip.textContent=v[0];chip.style.background=v[1];advice.textContent=v[2];res.classList.add('show');frame.classList.remove('on');step.textContent='اكتمل التحليل.';busy=false;go.disabled=false}
+sample('n');
+</script>
+</body>
+</html>
+
+### الآن احفظ وانشر:
+1. اضغط الزر الأخضر **«حفظ التغييرات» (Commit changes)**.
+2. انتظر دقيقة إلى دقيقتين حتى يُعاد بناء الموقع.
+3. افتح: `https://mohsensafe2.github.io/basar-ai/`
+
+سترى
